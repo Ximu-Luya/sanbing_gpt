@@ -147,7 +147,7 @@ const handler = async (req: Request): Promise<Response> => {
   console.log("messages: ", messages);
 
   const payload: OpenAIStreamPayload = {
-    model: "gpt-3.5-turbo-0301",
+    model: "gpt-3.5-turbo",
     messages: messages,
     temperature: 0,
     top_p: 1,
