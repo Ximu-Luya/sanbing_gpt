@@ -82,7 +82,7 @@ const DocsPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
 
         <main className="flex flex-col items-center justify-center flex-1 w-full min-h-screen px-4 py-2 mx-auto mt-12 text-center sm:mt-20">
           <h1 className="max-w-xl text-2xl font-bold sm:text-4xl">
-            问我任何<sup>*</sup>  关于MTD组件库的信息!
+            与散兵交谈
           </h1>
           <div className="w-full max-w-xl">
             <textarea
@@ -90,7 +90,7 @@ const DocsPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
               onChange={(e) => setUserQ(e.target.value)}
               rows={4}
               className="w-full p-2 my-5 border rounded-md shadow-md bg-neutral border-neutral-focus "
-              placeholder={"示例: Button组件如何改大小?"}
+              placeholder={"我遇到过你吗"}
             />
 
             {!loading && (
@@ -98,7 +98,7 @@ const DocsPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
                 className="w-full px-4 py-2 mt-2 font-mediu btn btn-primary"
                 onClick={(e) => generateAnswer(e)}
               >
-                询问 &rarr;
+                发送 &rarr;
               </button>
             )}
             {loading && (
@@ -121,7 +121,7 @@ const DocsPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
                   <>
                     <div>
                       <h2 className="mx-auto text-3xl font-bold sm:text-4xl">
-                        Here is your answer:{" "}
+                        散兵说:{" "}
                       </h2>
                     </div>
                       {answer.split("SOURCES:").map((splitanswer, index) => {
@@ -147,7 +147,7 @@ const DocsPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
                             
                             ) : (
                               <>
-                                <p>SOURCES:</p>
+                                <p>来源:</p>
                                 <ul>
                                   {splitanswer
                                     .trim()
