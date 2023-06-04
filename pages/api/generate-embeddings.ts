@@ -35,7 +35,7 @@ export default async function handle(
       const [{ embedding }] = embeddingResponse.data.data;
 
       // In production we should handle possible errors
-      await supabaseClient.from("documents").insert({
+      await supabaseClient.from("sanbing_memory").insert({
         content: input,
         embedding,
         url
